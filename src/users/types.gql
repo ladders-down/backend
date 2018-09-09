@@ -1,0 +1,14 @@
+type Query {
+  getUsers: [User]
+  find(id: ID!): User
+}
+
+type Mutation {
+  createUser(code: String): User
+}
+
+type User {
+  twitchID: Int
+  accessToken: String
+  canList: Boolean
+}
